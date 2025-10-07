@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cum04kcoolf7h"]
+
+[ext_resource type="Script" uid="uid://cxluj8ww3l81f" path="res://Scenes/House/house.gd" id="1_ha0hn"]
+[ext_resource type="Texture2D" uid="uid://5y3jsle2134y" path="res://Assets/house.png" id="1_x6o7t"]
+[ext_resource type="Texture2D" uid="uid://bhq3x15gt0rsh" path="res://Assets/construct.png" id="2_ha0hn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n67ul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x6o7t")
+}],
+"loop": true,
+"name": &"built",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ha0hn")
+}],
+"loop": true,
+"name": &"construction",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6o7t"]
+size = Vector2(230, 210)
+
+[node name="House" type="Area2D"]
+script = ExtResource("1_ha0hn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n67ul")
+animation = &"construction"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, 5)
+shape = SubResource("RectangleShape2D_x6o7t")

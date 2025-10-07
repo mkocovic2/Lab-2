@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy1s22jxi66xs"]
+
+[ext_resource type="Texture2D" uid="uid://cqtro4oh5knay" path="res://Assets/carry.png" id="1_h8bgt"]
+[ext_resource type="Script" uid="uid://cykrlj7ciuvoi" path="res://Scenes/Builder/builder.gd" id="1_lvyyy"]
+[ext_resource type="Texture2D" uid="uid://c01tosjus66wp" path="res://Assets/idle.png" id="2_lvyyy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c838x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h8bgt")
+}],
+"loop": true,
+"name": &"carrying",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lvyyy")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}]
+
+[node name="Builder" type="CharacterBody2D"]
+script = ExtResource("1_lvyyy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c838x")
+animation = &"empty"

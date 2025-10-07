@@ -1,0 +1,156 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch16mpbwdjuon"]
+
+[ext_resource type="PackedScene" uid="uid://dy1s22jxi66xs" path="res://Scenes/Builder/builder.tscn" id="1_s0gyx"]
+[ext_resource type="PackedScene" uid="uid://cnre2yn5d27dm" path="res://Scenes/Resources/resource.tscn" id="2_u872a"]
+[ext_resource type="PackedScene" uid="uid://cum04kcoolf7h" path="res://Scenes/House/house.tscn" id="3_nk5xi"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Build Squad" type="Node" parent="."]
+
+[node name="Builder" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-340, -11.999998)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder2" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-438.99994, 39.99997)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder3" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(147.99998, 134.99995)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder4" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(508.99997, -161)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder5" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-90.00003, -19.000027)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder6" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(496.99988, 75.999954)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder7" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-416.00006, 150.99998)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder8" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-515, 202.99995)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder9" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(71.99992, 297.99994)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder10" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(168.99997, -29.999992)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder11" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-166.00009, 143.99995)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder12" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(420.99982, 238.99994)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder13" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-438.00006, -300.99997)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder14" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-537, -249)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder15" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(49.99993, -154.00002)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder16" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-256.99997, -195.00002)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder17" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(-208, -290)
+scale = Vector2(0.2, 0.2)
+
+[node name="Builder18" parent="Build Squad" instance=ExtResource("1_s0gyx")]
+position = Vector2(398.99982, -213.00002)
+scale = Vector2(0.2, 0.2)
+
+[node name="Resource Depots" type="Node" parent="."]
+
+[node name="Resource" parent="Resource Depots" instance=ExtResource("2_u872a")]
+position = Vector2(354, 208)
+scale = Vector2(0.3, 0.3)
+resource_amount = 7
+respawn_time = 5.0
+respawn_amount = 7
+
+[node name="Resource2" parent="Resource Depots" instance=ExtResource("2_u872a")]
+position = Vector2(225, -235)
+scale = Vector2(0.3, 0.3)
+resource_amount = 7
+respawn_time = 5.0
+respawn_amount = 7
+
+[node name="Resource3" parent="Resource Depots" instance=ExtResource("2_u872a")]
+position = Vector2(-472, -211)
+scale = Vector2(0.3, 0.3)
+resource_amount = 7
+respawn_time = 5.0
+respawn_amount = 7
+
+[node name="Resource4" parent="Resource Depots" instance=ExtResource("2_u872a")]
+position = Vector2(-381, 248)
+scale = Vector2(0.3, 0.3)
+resource_amount = 7
+respawn_time = 5.0
+respawn_amount = 7
+
+[node name="Resource5" parent="Resource Depots" instance=ExtResource("2_u872a")]
+position = Vector2(515, -57)
+scale = Vector2(0.3, 0.3)
+resource_amount = 7
+respawn_time = 5.0
+respawn_amount = 7
+
+[node name="Resource6" parent="Resource Depots" instance=ExtResource("2_u872a")]
+position = Vector2(-182, -33)
+scale = Vector2(0.3, 0.3)
+resource_amount = 7
+respawn_time = 5.0
+respawn_amount = 7
+
+[node name="Resource7" parent="Resource Depots" instance=ExtResource("2_u872a")]
+position = Vector2(48, 78)
+scale = Vector2(0.3, 0.3)
+resource_amount = 7
+respawn_time = 5.0
+respawn_amount = 7
+
+[node name="Houses" type="Node" parent="."]
+
+[node name="House" parent="Houses" instance=ExtResource("3_nk5xi")]
+position = Vector2(-56.000046, -218.99998)
+scale = Vector2(0.63, 0.63)
+resources_needed = 20
+
+[node name="House2" parent="Houses" instance=ExtResource("3_nk5xi")]
+position = Vector2(332.99994, -38.999985)
+scale = Vector2(0.63, 0.63)
+resources_needed = 20
+
+[node name="House3" parent="Houses" instance=ExtResource("3_nk5xi")]
+position = Vector2(-468, -67)
+scale = Vector2(0.63, 0.63)
+resources_needed = 20
+
+[node name="House4" parent="Houses" instance=ExtResource("3_nk5xi")]
+position = Vector2(-73, 230.99998)
+scale = Vector2(0.63, 0.63)
+resources_needed = 20
+
+[node name="Camera2D" type="Camera2D" parent="."]
