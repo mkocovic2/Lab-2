@@ -10,6 +10,7 @@ var is_depleted = false
 @onready var sprite = $Sprite2D
 
 func _ready():
+	# Register with resources group so builders can find us
 	add_to_group("resources")
 
 func is_available() -> bool:
@@ -21,8 +22,10 @@ func pickup() -> bool:
 	if not is_available():
 		return false
 	
+	# Remove one unit
 	current_amount -= 1
 	
+	# Check if we're out of resources
 	if current_amount <= 0:
 		is_depleted = true
 		handle_depletion()
@@ -31,6 +34,7 @@ func pickup() -> bool:
 
 func handle_depletion():
 	"""Handle resource running out"""
+	# Hide and wait to respawn if respawn time is set
 	if respawn_time > 0:
 		hide()
 		await get_tree().create_timer(respawn_time).timeout
@@ -40,6 +44,7 @@ func handle_depletion():
 
 func respawn():
 	"""Respawn the resource"""
+	# Reset amount and show again
 	current_amount = respawn_amount
 	is_depleted = false
 	show()
